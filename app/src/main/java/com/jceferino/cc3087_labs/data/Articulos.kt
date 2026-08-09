@@ -17,14 +17,14 @@ val articulosDeEjemplo: List<Articulo> = listOf(
         extracto = "Comparto una guía de soluciones comunes para su uso en la refrigeración " +
                 "líquida de sistemas computacionales",
         minutosLectura = 5,
-        fecha = "12 dic"
+        fecha = "7 jul"
     ),
     Articulo(
         autor = "Lionel Messi",
         titulo = "Guía de iPhones 2026",
         extracto = "Si no sabes que iPhone comprar en pleno 2026, traigo aquí una tierlist " +
                 "de los mejores iPhones que puedes comprar actualmente",
-        minutosLectura = 5,         
-        fecha = "12 dic"
+        minutosLectura = 5,
+        fecha = "3 mar"
     )
 )
