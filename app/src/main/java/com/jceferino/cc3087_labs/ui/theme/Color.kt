@@ -1,4 +1,4 @@
-package com.example.cc3087_labs.ui.theme
+package com.jceferino.cc3087_labs.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
