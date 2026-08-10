@@ -16,6 +16,8 @@ import com.jceferino.cc3087_labs.ui.components.ArticuloItem
 import com.jceferino.cc3087_labs.ui.components.FilaPestanas
 import com.jceferino.cc3087_labs.ui.components.BarraSuperior
 
+import androidx.compose.ui.tooling.preview.Preview
+import com.jceferino.cc3087_labs.data.articulosDeEjemplo
 private val coloresAvatar = listOf(
     Color(0xFFCC6633),
     Color(0xFF4A7A9D),
@@ -56,4 +58,10 @@ fun InicioScreen(
             }
         }
     }
+}
+
+@Preview(showBackground = true, widthDp = 360, heightDp = 800)
+@Composable
+private fun InicioScreenPreview(){
+    InicioScreen(articulos = articulosDeEjemplo)
 }
