@@ -24,7 +24,13 @@ import com.jceferino.cc3087_labs.ui.screens.InicioScreen
 * Pregunta 2: el artículo recibe el modifier por parámetro porque de esta manera el margen
 * puede ser un valor dinámico en lugar de estático. Si el margen se fijara adentro de este, el
 * espacio que ocupa el articulo sería exactamente igual en dos pantallas con espaciados distintos.
-* */
+*
+
+Uso de AI en el Laboratorio 6: Calude fue usado como guía para entender el funcionamiento de los
+comportamientos de las pestañas, implementación de lógica y diseño de la nueva screen y explicación
+de la lógica remember/saveable
+*/
+
 class MainActivity : ComponentActivity() {
     companion object {
         private const val TAG = "LAB6_251043"
