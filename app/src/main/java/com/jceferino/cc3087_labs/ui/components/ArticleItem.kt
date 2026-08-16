@@ -22,7 +22,7 @@ import androidx.compose.ui.unit.sp
 import com.jceferino.cc3087_labs.model.Article
 
 @Composable
-fun ArticuloItem(
+fun ArticleItem(
     article: Article,
     colorAvatar: Color,
     colorMiniatura: Color,

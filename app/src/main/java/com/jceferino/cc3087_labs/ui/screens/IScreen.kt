@@ -7,17 +7,21 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.graphics.Color
 import com.jceferino.cc3087_labs.model.Article
-import com.jceferino.cc3087_labs.ui.components.Separador
-import com.jceferino.cc3087_labs.ui.components.ArticuloItem
-import com.jceferino.cc3087_labs.ui.components.FilaPestanas
-import com.jceferino.cc3087_labs.ui.components.BarraSuperior
-
+import com.jceferino.cc3087_labs.ui.components.Separator
+import com.jceferino.cc3087_labs.ui.components.ArticleItem
+import com.jceferino.cc3087_labs.ui.components.TabsRow
+import com.jceferino.cc3087_labs.ui.components.UpperBar
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.tooling.preview.Preview
 import com.jceferino.cc3087_labs.data.articulosDeEjemplos
+
 private val coloresAvatar = listOf(
     Color(0xFFCC6633),
     Color(0xFF4A7A9D),
@@ -29,11 +33,17 @@ private val coloresMiniatura = listOf(
     Color(0xFF9C7A2E)
 )
 
+
+
+
 @Composable
+
 fun InicioScreen(
+
     articles: List<Article>,
     modifier: Modifier = Modifier
 ) {
+    var selectedTab by rememberSaveable { mutableStateOf("Para ti") }
     // Todo esta dentro de este column
     Column(
         modifier = modifier
@@ -41,19 +51,22 @@ fun InicioScreen(
             .background(Color(0xFF121212))
             .verticalScroll(rememberScrollState())
     ) {
-        BarraSuperior(nombreApp = "Lecturas")
-        FilaPestanas()
+        UpperBar(nombreApp = "Lecturas")
+        TabsRow(
+            selectedTab = selectedTab,
+            onTabSelected = { newTab -> selectedTab = newTab }
+        )
 
         Column(modifier = Modifier.padding(horizontal = 16.dp)) {
             articles.forEachIndexed { index, articulo ->
-                ArticuloItem(
+                ArticleItem(
                     article = articulo,
                     colorAvatar = coloresAvatar[index % coloresAvatar.size],
                     colorMiniatura = coloresMiniatura[index % coloresMiniatura.size]
                 )
                 // Esto evita que haya un separador después del último artículo
                 if (index != articles.lastIndex) {
-                    Separador()
+                    Separator()
                 }
             }
         }
