@@ -9,7 +9,6 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -20,11 +19,11 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.jceferino.cc3087_labs.model.Articulo
+import com.jceferino.cc3087_labs.model.Article
 
 @Composable
 fun ArticuloItem(
-    articulo: Articulo,
+    article: Article,
     colorAvatar: Color,
     colorMiniatura: Color,
     modifier: Modifier = Modifier
@@ -45,7 +44,7 @@ fun ArticuloItem(
                         .background(colorAvatar)
                 )
                 Text(
-                    text = articulo.autor,
+                    text = article.author,
                     modifier = Modifier.padding(start = 8.dp),
                     color = Color.White,
                     fontSize = 12.sp
@@ -55,7 +54,7 @@ fun ArticuloItem(
             Spacer(modifier = Modifier.height(8.dp))
 
             Text(
-                text = articulo.titulo,
+                text = article.title,
                 color = Color.White,
                 fontSize = 18.sp,
                 fontWeight = FontWeight.Bold
@@ -64,7 +63,7 @@ fun ArticuloItem(
             Spacer(modifier = Modifier.height(4.dp))
 
             Text(
-                text = articulo.extracto,
+                text = article.excerpt,
                 color = Color(0xFFAAAAAA),
                 fontSize = 14.sp
             )
@@ -73,7 +72,7 @@ fun ArticuloItem(
 
             Row {
                 Text(
-                    text = "${articulo.minutosLectura} min de lectura",
+                    text = "${article.readingMinutes} min de lectura",
                     color = Color(0xFF888888),
                     fontSize = 12.sp
                 )
@@ -83,7 +82,7 @@ fun ArticuloItem(
                     fontSize = 12.sp
                 )
                 Text(
-                    text = articulo.fecha,
+                    text = article.date,
                     color = Color(0xFF888888),
                     fontSize = 12.sp
                 )

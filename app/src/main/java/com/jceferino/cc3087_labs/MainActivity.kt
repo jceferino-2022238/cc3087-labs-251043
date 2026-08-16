@@ -8,7 +8,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
 import com.jceferino.cc3087_labs.ui.theme.Cc3087labsTheme
-import com.jceferino.cc3087_labs.data.articulosDeEjemplo
+import com.jceferino.cc3087_labs.data.articulosDeEjemplos
 import com.jceferino.cc3087_labs.ui.screens.InicioScreen
 /*
   José Carlos Ceferino Fabián, 251043
@@ -31,7 +31,7 @@ class MainActivity : ComponentActivity() {
             Cc3087labsTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     InicioScreen(
-                        articulos = articulosDeEjemplo,
+                        articles = articulosDeEjemplos,
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
