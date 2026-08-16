@@ -20,7 +20,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun BarraSuperior(
+fun UpperBar(
     nombreApp: String,
     modifier: Modifier = Modifier
 ) {
