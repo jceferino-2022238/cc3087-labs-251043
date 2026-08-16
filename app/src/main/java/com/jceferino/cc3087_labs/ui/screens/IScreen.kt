@@ -57,7 +57,7 @@ fun InicioScreen(
     var selectedTab by rememberSaveable { mutableStateOf("Para ti") }
     var showShortReadsOnly by rememberSaveable{ mutableStateOf(false)}
 
-    var applauseCount by remember { mutableStateOf(0) }
+    var applauseCount by rememberSaveable{ mutableStateOf(0) }
 
     val results: List<Article> = articles.filter { article ->
         val coincidenceWithTab = when (selectedTab){
